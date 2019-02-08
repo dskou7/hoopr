@@ -1,12 +1,12 @@
 h1 {
-    font-size: 30px;
+    font-size: 25px;
     font-family: 'Varela Round', sans-serif;
     font-weight: lighter;
     color: white;
 }
 
 #navbar {
-    color: gray;
+    color: black;
     height: 10%
     width 100%
 }
