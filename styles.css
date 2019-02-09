@@ -1,0 +1,49 @@
+#header {
+    background-color: #20294c;
+    color: white;
+    text-align: left-side;
+}
+
+#container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #20294c;
+}
+
+#content {
+    background-image: url('court.jpg');
+    background-size: cover;
+    height: 100%;
+}
+        
+a { 
+    color: #242830; 
+}
+        
+div {
+    background-color: #1f6e96;
+}
+    
+h1 {
+    font-size: 25px;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: lighter;
+    color: white;
+}
+        
+h2 {
+    font-size: 32px;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: normal;
+    color: white;
+}
+        
+l2 {
+    font-size: 20px;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: lighter;
+    color: white;
+}
