@@ -38,6 +38,45 @@
                             #spacer {
                                 height: 20px
                             }
+                            button{
+                                background:#d30915;
+                                color:#fff;
+                                border:none;
+                                position:relative;
+                                height:50px;
+                                width:150px
+                                font-size:1.6em;
+                                padding:0 2em;
+                                cursor:pointer;
+                                transition:800ms ease all;
+                                outline:none;
+                                border-radius: 8px;
+                            }
+                            button:hover{
+                                background:#fff;
+                                color:#d30915;
+                            }
+                            button:before,button:after{
+                                content:'';
+                                position:absolute;
+                                top:0;
+                                right:0;
+                                height:2px;
+                                width:0;
+                                background: #a30500;
+                                transition:400ms ease all;
+                                border-radius: 8px;
+                            }
+                            button:after{
+                                right:inherit;
+                                top:inherit;
+                                left:0;
+                                bottom:0;
+                            }
+                            button:hover:before,button:hover:after{
+                                width:100%;
+                                transition:800ms ease all;
+                            }
                             </style>
                             <body>
                                 
@@ -64,7 +103,7 @@
                                         <p style="color:white">FIND PICKUP BASKETBALL</p>
                                         <center><img id = "logo" src="logo.png" height="160" width="auto"></img></center>
                                         <div id = "spacer"></div>
-                                        <button class="w3-button w3-red w3-padding-large w3-large w3-margin-top">GET STARTED</button>
+                                        <button type = "button" onclick="return false">GET STARTED</button>
                                     </div> </center>
                                 </div>
                                 
