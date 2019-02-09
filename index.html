@@ -8,31 +8,36 @@
                     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
                         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                             <style>
-                                body,h1,h2,h3,h4,h5,h6 {
-                                    font-family: "Lato", sans-serif
-                                }
-                                .w3-bar,h1,button {
-                                    font-family: "Montserrat", sans-serif
-                                }
-                                .fa-anchor,.fa-coffee {
-                                    font-size:200px
-                                }
-                                
-                                #header {
-                                    position: absolute;
-                                    bottom: 0;
-                                    
-                                }
-                            
-                                #container {
-                                    position: absolute;
-                                    top: 0;
-                                    right: 0;
-                                    bottom: 0;
-                                    left: 0;
-                                    background-image: url('court.jpg');
-                                    background-size: cover;
-                                }
+                            body,h1,h2,h3,h4,h5,h6 {
+                                font-family: "Lato", sans-serif;
+                            }
+                            .w3-bar,h1,button {
+                                font-family: "Montserrat", sans-serif;
+                            }
+                            .fa-anchor,.fa-coffee {
+                                font-size:200px;
+                            }
+                            p {
+                                font-size: 20px;
+                            }
+                            h1 {
+                                font-size: 90px;
+                            }
+                            #content {
+                                line-height: 280%;
+                            }
+                            #container {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                left: 0;
+                                background-image: url('court.jpg');
+                                background-size: cover;
+                            }
+                            #spacer {
+                                height: 20px
+                            }
                             </style>
                             <body>
                                 
@@ -52,19 +57,18 @@
                                     </div>
                                 </div>
                                 
-                                <!-- Header
-                                <header id = "header" class="w3-container w3-red w3-center" style="padding:128px 16px">
-                                    <h1 class="w3-margin w3-jumbo">HOOPR</h1>
-                                    <p class="w3-xlarge">FIND PICKUP BASKETBALL</p>
-                                    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">GET STARTED</button>
-                                </header>-->
+                                <!-- Main content -->
                                 <div id = "container">
-                                    <center> <div id = "content" style="padding:128px 16px">
-                                        <h1 class="w3-margin w3-jumbo" style="color:white; font-weight:999">HOOPR</h1>
-                                        <p class="w3-xlarge" style="color:white">FIND PICKUP BASKETBALL</p>
+                                    <center> <div id = "content" style="padding:110px 16px">
+                                        <h1 style="color:white; font-weight:999">HOOPR</h1>
+                                        <p style="color:white">FIND PICKUP BASKETBALL</p>
+                                        <center><img id = "logo" src="logo.png" height="160" width="auto"></img></center>
+                                        <div id = "spacer"></div>
                                         <button class="w3-button w3-red w3-padding-large w3-large w3-margin-top">GET STARTED</button>
                                     </div> </center>
                                 </div>
+                                
+                                <!-- Scripting -->
                                 <script>
                                     // Used to toggle the menu on small screens when clicking on the menu button
                                     function myFunction() {
