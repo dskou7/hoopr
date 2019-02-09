@@ -8,11 +8,11 @@
                     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
                         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                             <style>
-                            body,h1,h2,h3,h4,h5,h6 {
-                                font-family: "Lato", sans-serif;
-                            }
-                            .w3-bar,h1,button {
+                            body,h1,button {
                                 font-family: "Montserrat", sans-serif;
+                            }
+                            h2 {
+                                font-family: "Lato", sans-serif;
                             }
                             .fa-anchor,.fa-coffee {
                                 font-size:200px;
@@ -21,7 +21,7 @@
                                 font-size: 20px;
                             }
                             h1 {
-                                font-size: 90px;
+                                font-size: 80px;
                             }
                             #content {
                                 line-height: 280%;
@@ -35,9 +35,6 @@
                                 background-image: url('court.jpg');
                                 background-size: cover;
                             }
-                            #spacer {
-                                height: 20px
-                            }
                             button{
                                 background:#d30915;
                                 color:#fff;
@@ -45,7 +42,7 @@
                                 position:relative;
                                 height:50px;
                                 width:150px
-                                font-size:1.6em;
+                                font-size:20px;
                                 padding:0 2em;
                                 cursor:pointer;
                                 transition:800ms ease all;
@@ -61,7 +58,7 @@
                                 position:absolute;
                                 top:0;
                                 right:0;
-                                height:2px;
+                                height:3px;
                                 width:0;
                                 background: #a30500;
                                 transition:400ms ease all;
@@ -77,32 +74,76 @@
                                 width:100%;
                                 transition:800ms ease all;
                             }
+                            .topnav {
+                                overflow: hidden;
+                                background-color: #272833;
+                            }
+                            
+                            .topnav a {
+                                float: left;
+                                color: #d30915;
+                                text-align: center;
+                                padding: 16px 16px;
+                                text-decoration: none;
+                                font-size: 18px;
+                            }
+                            
+                            .topnav a:hover {
+                                background-color: #353641;
+                                color: white;
+                            }
+                            
+                            .topnav a.active {
+                                background-color: #d30915;
+                                color: white;
+                            }
+                            @media only screen and (max-width: 600px) {
+                                #search {
+                                    display: none;
+                                }
+                            }
                             </style>
                             <body>
-                                
-                                <!-- Navbar -->
+                                <!-- Navbar
                                 <div class="w3-top">
                                     <div class="w3-bar w3-black w3-card w3-left-align w3-large">
                                         <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-red w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-                                        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-red">HOME</a>
-                                        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-red">FIND</a>
-                                        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-red">LIVE</a>
+                                        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-red w3-hover-blue">HOME</a>
+                                        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-blue">FIND</a>
+                                        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-blue">LIVE</a>
+                                        <a href="#" style="float:right" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-blue">&#x1F50D</a>
+                                        <div class="search-container">
+                                            <form action="/action_page.php">
+                                                <input style="padding:9px; margin-top:1px; float:right"type="text" placeholder="Search..." name="search">
+                                                    
+                                                    </form>
+                                        </div>
+                                        
                                     </div>
                                     
-                                    <!-- Navbar on small screens -->
+                                    <!-- Navbar on small screens
                                     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
                                         <a href="#" class="w3-bar-item w3-button w3-padding-large">FIND</a>
                                         <a href="#" class="w3-bar-item w3-button w3-padding-large">LIVE</a>
+                                        <a href="#" class="w3-bar-item w3-button w3-padding-large">SEARCH</a>
                                     </div>
-                                </div>
+                                </div> -->
                                 
-                                <!-- Main content -->
                                 <div id = "container">
+                                    <!-- Navigation bar -->
+                                    <div class="w3-top">
+                                        <div class="topnav">
+                                            <a class="active" href="#home" style="color:white">HOME</a>
+                                            <a href="#find" style="color:white">&nbsp FIND &nbsp</a>
+                                            <a href="#live" style="color:white">&nbsp LIVE &nbsp</a>
+                                            <input type="text" id ="search" class="w3-bar-item w3-input" style= "border-radius: 150px; color: #5D5E67; float:right; height: 40px; width:250px; margin-top: 9px; margin-right: 20px" placeholder="Search...">
+                                        </div>
+                                    </div>
+                                    <!-- Main content -->
                                     <center> <div id = "content" style="padding:110px 16px">
                                         <h1 style="color:white; font-weight:999">HOOPR</h1>
                                         <p style="color:white">FIND PICKUP BASKETBALL</p>
-                                        <center><img id = "logo" src="logo.png" height="160" width="auto"></img></center>
-                                        <div id = "spacer"></div>
+                                        <center><img id = "logo" src="logo.png" height="160" width="auto" style="margin-top: 30px; margin-bottom: 50px"></img></center>
                                         <button type = "button" onclick="return false">GET STARTED</button>
                                     </div> </center>
                                 </div>
