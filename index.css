@@ -1,208 +1,212 @@
 body,a,p {
-          font-family: "Montserrat", sans-serif;
-      }
-      h1 {
-          font-family: "Montserrat", sans-serif;
-          font-weight: normal;
-          font-size: 80px;
-      }
-      h2 {
-          font-family: "Montserrat", sans-serif;
-          font-weight: lighter;
-          font-size: 20px;
-      }
-      #content {
-          line-height: 350%;
-      }
-      #container {
-          position: absolute;
-          min-height: 615px;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          background-image: url('court.jpg');
-          background-size: cover;
-          background-repeat:no-repeat;
-          background-position:center;
-          background-color: #272833;
-      }
-      .startButton{
-          background:#d30915;
-          color:#fff;
-          border:none;
-          position:relative;
-          height:50px;
-          width:auto;
-          padding:0 2em;
-          cursor:pointer;
-          transition:800ms ease all;
-          outline:none;
-          border-radius: 7px;
-      }
-      .startButton:hover{
-          background:#fff;
-          color:#d30915;
-      }
-      .startButton:before{
-          content:'';
-          position:absolute;
-          top:0;
-          right:0;
-          height:5.8px;
-          width:0;
-          background: #a30500;
-          transition:400ms ease all;
-          border-top-left-radius: 999px;
-          border-top-right-radius: 999px;
-      }
-      .startButton:after{
-          content:'';
-          position:absolute;
-          top:0;
-          right:0;
-          height:5.8px;
-          width:0;
-          background: #a30500;
-          transition:400ms ease all;
-          border-bottom-left-radius: 999px;
-          border-bottom-right-radius: 999px;
+    font-family: "Montserrat", sans-serif;
+}
 
-      }
-      .startButton:after{
-          right:inherit;
-          top:inherit;
-          left:0;
-          bottom:0;
-      }
-      .startButton:hover:before,.startButton:hover:after{
-          width:100%;
-          transition:800ms ease all;
-      }
-      .mobileButton {
-          background:#d30915;
-          color:#fff;
-          border:none;
-          position:relative;
-          height:50px;
-          width:auto;
-          padding:0 2em;
-          cursor:pointer;
-          outline:none;
-          border-radius: 7px;
-      }
-      .mobileButton:hover{
-          background:#fff;
-          color:#d30915;
-      }
-      .mobileButton:after{
-          right:inherit;
-          top:inherit;
-          left:0;
-          bottom:0;
-      }
-      .mobileButton:hover:before,.startButton:hover:after{
-          width:100%;
-          transition:800ms ease all;
-      }
-      .topnav {
-          overflow: hidden;
-          background-color: #272833;
-      }
-      .topnav a {
-          float: left;
-          width: 100px;
-          color: #d30915;
-          text-align: center;
-          padding: 12px 16px;
-          text-decoration: none;
-          font-size: 18px;
-      }
-      .topnav a:hover {
-          background-color: #484a5e;
-          color: white;
-      }
-      .topnav a.active {
-          background-color: #d30915;
-          color: white;
-      }
-      /* The Modal (background) */
-      .modal {
-          display: none; /* Hidden by default */
-          position: fixed; /* Stay in place */
-          z-index: 1; /* Sit on top */
-          padding-top: 100px; /* Location of the box */
-          left: 0;
-          top: 0;
-          width: 100%; /* Full width */
-          height: 100%; /* Full height */
-          overflow: auto; /* Enable scroll if needed */
-          background-color: rgb(0,0,0); /* Fallback color */
-          background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
-      }
+h1 {
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: normal !important;
+    font-size: 80px !important;
+}
 
-      /* Modal Content */
-      .modal-content {
-          position: relative;
-          background-color: #fefefe;
-          margin: auto;
-          padding: 0;
-          border: 1px solid #272833;
-          width: 80%;
-          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-          -webkit-animation-name: animatetop;
-          -webkit-animation-duration: 0.4s;
-          animation-name: animatetop;
-          animation-duration: 0.4s
-      }
+h2 {
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: lighter !important;
+    font-size: 20px !important;
+}
 
-      /* Add Animation */
-      @-webkit-keyframes animatetop {
-          from {top:-300px; opacity:0}
-          to {top:0; opacity:1}
-      }
+#content {
+    line-height: 350%;
+}
 
-      @keyframes animatetop {
-          from {top:-300px; opacity:0}
-          to {top:0; opacity:1}
-      }
+#container {
+    position: absolute;
+    min-height: 615px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('court.jpg');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-color: #272833;
+}
+.startButton{
+    background:#d30915;
+    color:#fff;
+    border:none;
+    position:relative;
+    height:50px;
+    width:auto;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+    border-radius: 7px;
+}
+.startButton:hover{
+    background:#fff;
+    color:#d30915;
+}
+.startButton:before{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:5.8px;
+    width:0;
+    background: #a30500;
+    transition:400ms ease all;
+    border-top-left-radius: 999px;
+    border-top-right-radius: 999px;
+}
+.startButton:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:5.8px;
+    width:0;
+    background: #a30500;
+    transition:400ms ease all;
+    border-bottom-left-radius: 999px;
+    border-bottom-right-radius: 999px;
 
-      /* The Close Button */
-      .close {
-          color: white;
-          float: right;
-          font-size: 28px;
-          font-weight: bold;
-      }
+}
+.startButton:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+}
+.startButton:hover:before,.startButton:hover:after{
+    width:100%;
+    transition:800ms ease all;
+}
+.mobileButton {
+    background:#d30915;
+    color:#fff;
+    border:none;
+    position:relative;
+    height:50px;
+    width:auto;
+    padding:0 2em;
+    cursor:pointer;
+    outline:none;
+    border-radius: 7px;
+}
+.mobileButton:hover{
+    background:#fff;
+    color:#d30915;
+}
+.mobileButton:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+}
+.mobileButton:hover:before,.startButton:hover:after{
+    width:100%;
+    transition:800ms ease all;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #272833;
+}
+.topnav a {
+    float: left;
+    width: 100px;
+    color: #d30915;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+.topnav a:hover {
+    background-color: #484a5e;
+    color: white;
+}
+.topnav a.active {
+    background-color: #d30915;
+    color: white;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+}
 
-      .close:hover,
-      .close:focus {
-          color: #484a5e;
-          text-decoration: none;
-          cursor: pointer;
-      }
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #272833;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
 
-      .modal-header {
-          padding: 2px 16px;
-          background-color: #272833;
-          color: white;
-      }
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
 
-      .modal-body {padding: 2px 16px;}
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
 
-      .modal-footer {
-          padding: 2px 16px;
-          background-color: #272833;
-          color: white;
-      }
-      @media only screen and (max-width: 400px) {
-          .topnav a {
-              float: left;
-              width: 25%;
-              color: #d30915;
-              text-align: center;
-              padding: 12px 16px;
-              text-decoration: none;
-              font-size: 18px;
-          }
-      }
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #484a5e;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #272833;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #272833;
+    color: white;
+}
+@media only screen and (max-width: 400px) {
+    .topnav a {
+        float: left;
+        width: 25%;
+        color: #d30915;
+        text-align: center;
+        padding: 12px 16px;
+        text-decoration: none;
+        font-size: 18px;
+    }
+}

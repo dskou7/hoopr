@@ -1,99 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-    <title>Hoopr - Find</title>
-        <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="/find.css" />
-            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Hoopr - Find</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/find.css" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-            <body>
-                <!-- Navigation bar -->
-                <div class="w3-top">
-                    <div class="topnav">
-                        <a href="/index.html" style="color:white"> HOME </a>
-                        <a class="active" href="/find.html" style="color:white"> FIND </a>
-                        <a href="/live.html" style="color:white"> LIVE </a>
-                    </div>
+<body>
+    <!-- Navigation bar -->
+    <div class="w3-top">
+        <div class="topnav">
+            <a href="/index.html" style="color:white"> HOME </a>
+            <a class="active" href="/find.html" style="color:white"> FIND </a>
+            <a href="/live.html" style="color:white"> LIVE </a>
+        </div>
+    </div>
+    <div id = "container">
+        <!-- Main content -->
+        <div id = "content">
+            <div id="search">
+                <input type="text" placeholder="Search..">
+            </div>
+            <iframe id="map" src="https://snazzymaps.com/embed/132353" style="border:none;"></iframe>
+            <div id = "selection" class="flex-container" style="margin-left: 10px">
+                <div id = "titleButton" style = "margin-left: 20px">
+                    <p style="font-size: 25px; font-weight:999; color:#d30915;">VASA Fitness</p>
+                    <button id ="viewButton" onclick="window.location.href='/live.html'">View Live Stream</button>
                 </div>
-                <div id = "container">
-                    <!-- Main content -->
-                        <div id = "content">
-                            <iframe id="map" src="https://snazzymaps.com/embed/132353" style="border:none; margin-top: 50px"></iframe>
-                            <div id = "selection" class="flex-container" style="margin-left: 10px">
-                                <div id = "titleButton" style = "margin-left: 20px">
-                                    <p style="font-size: 25px; font-weight:999; color:#d30915;">VASA Fitness</p>
-                                    <button id ="viewButton" onclick="window.location.href='/live.html'">View Live Stream</button>
-                                </div>
-                                <div id = "addressLogo">
-                                    <img id = "logo" src="address.png" height="90px" width="auto"></img>
-                                </div>
-                                <div id = "address">
-                                    <p style="text-align: left; font-size: 18px; font-weight:999; color:#d30915;">Address</p>
-                                    <p style="text-align: left; font-size: 12px; color:#272833;">1259 S 800 E</p>
-                                    <p style="text-align: left; font-size: 12px; color:#272833;">Orem, UT 84097</p>
-                                </div>
-                                <div id = "phoneLogo">
-                                    <img id = "logo" src="phone.png" height="90px" width="auto"></img>
-                                </div>
-                                <div id = "phone">
-                                    <p style="text-align: left; font-size: 18px; font-weight:999; color:#d30915;">Phone</p>
-                                    <p style="text-align: left; font-size: 12px; color:#272833;">(801) 655-1139</p>
-                                    <p style="text-align: left; font-size: 12px; color:#272833;">5:00 AM - 12:00 AM</p>
-                                </div>
-                                <div id = "emailLogo">
-                                    <img id = "logo" src="email.png" height="90px" width="auto"></img>
-                                </div>
-                                <div id = "email">
-                                    <p style="text-align: left; font-size: 18px; font-weight:999; color:#d30915;">Email</p>
-                                    <p style="text-align: left; font-size: 12px; color:#272833;">info@vasafitness.com</p>
-                                    <p style="text-align: left; font-size: 12px; color:#272833;">reception@vasafitness.com</p>
-                                </div>
-                            </div>
-                        </div>
+                <div id = "addressLogo">
+                    <img id = "logo" src="address.png" height="90px" width="auto"></img>
                 </div>
-
-                    <!-- The Modal -->
-                <div id="myModal" class="modal">
-                        <!-- Modal content -->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <span class="close">&times;</span>
-                            <center><h2> &nbsp&nbsp&nbsp Find</h2></center>
-                        </div>
-                        <div class="modal-body">
-                            <center><p>This page offers an interactive map for finding gyms in your area. Simply search for a location or specific gym and click on the correct result. The gym's information will be automatically displayed below. To view the live feed, simply click the corresponding button.</p></center>
-                        </div>
-                    </div>
+                <div id = "address">
+                    <p style="text-align: left; font-size: 18px; font-weight:999; color:#d30915;">Address</p>
+                    <p style="text-align: left; font-size: 12px; color:#272833;">1259 S 800 E</p>
+                    <p style="text-align: left; font-size: 12px; color:#272833;">Orem, UT 84097</p>
                 </div>
-                <!-- Scripting -->
-                <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-                <script>
-                // Get the modal
-                var modal = document.getElementById('myModal');
+                <div id = "phoneLogo">
+                    <img id = "logo" src="phone.png" height="90px" width="auto"></img>
+                </div>
+                <div id = "phone">
+                    <p style="text-align: left; font-size: 18px; font-weight:999; color:#d30915;">Phone</p>
+                    <p style="text-align: left; font-size: 12px; color:#272833;">(801) 655-1139</p>
+                    <p style="text-align: left; font-size: 12px; color:#272833;">5:00 AM - 12:00 AM</p>
+                </div>
+                <div id = "emailLogo">
+                    <img id = "logo" src="email.png" height="90px" width="auto"></img>
+                </div>
+                <div id = "email">
+                    <p style="text-align: left; font-size: 18px; font-weight:999; color:#d30915;">Email</p>
+                    <p style="text-align: left; font-size: 12px; color:#272833;">info@vasafitness.com</p>
+                    <p style="text-align: left; font-size: 12px; color:#272833;">reception@vasafitness.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                // Get the button that opens the modal
-                var btn = document.getElementById("info");
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <center><h2> &nbsp&nbsp&nbsp Find</h2></center>
+            </div>
+            <div class="modal-body">
+                <center><p>This page offers an interactive map for finding gyms in your area. Simply search for a location or specific gym and click on the correct result. The gym's information will be automatically displayed below. To view the live feed, simply click the corresponding button.</p></center>
+            </div>
+        </div>
+    </div>
+    <!-- Scripting -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
 
-                // Get the <span> element that closes the modal
-                var span = document.getElementsByClassName("close")[0];
+    // Get the button that opens the modal
+    var btn = document.getElementById("info");
 
-                // When the user clicks the button, open the modal
-                btn.onclick = function() {
-                    modal.style.display = "block";
-                }
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
 
-                // When the user clicks on <span> (x), close the modal
-                span.onclick = function() {
-                    modal.style.display = "none";
-                }
-                // When the user clicks anywhere outside of the modal, close it
-                window.onclick = function(event) {
-                    if (event.target == modal) {
-                        modal.style.display = "none";
-                    }
-                }
-            </script>
-            </body>
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
+</body>
 </html>
