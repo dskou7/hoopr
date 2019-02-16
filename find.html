@@ -1,13 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Hoopr - Find</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/find.css" />
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+    <title>Hoopr - Find</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/find.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- google maps script-->
+    <script>
+      // This example requires the Places library. Include the libraries=places
+      // parameter when you first load the API. For example:
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+      var map;
+      var service;
+      var infowindow;
+
+      function initMap() {
+        var sydney = new google.maps.LatLng(-33.867, 151.195);
+
+        infowindow = new google.maps.InfoWindow();
+
+        map = new google.maps.Map(
+            document.getElementById('map'), {center: sydney, zoom: 15});
+
+        var request = {
+          query: 'Museum of Contemporary Art Australia',
+          fields: ['name', 'geometry'],
+        };
+
+        service = new google.maps.places.PlacesService(map);
+
+        service.findPlaceFromQuery(request, function(results, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+            for (var i = 0; i < results.length; i++) {
+              createMarker(results[i]);
+            }
+
+            map.setCenter(results[0].geometry.location);
+          }
+        });
+      }
+
+      function createMarker(place) {
+        var marker = new google.maps.Marker({
+          map: map,
+          position: place.geometry.location
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.setContent(place.name);
+          infowindow.open(map, this);
+        });
+      }
+    </script>
+
+</head>
 <body>
     <!-- Navigation bar -->
     <div class="w3-top">
@@ -21,9 +72,17 @@
         <!-- Main content -->
         <div id = "content">
             <div id="search">
-                <input type="text" placeholder="Search..">
+                <form action="">
+                    <input type="text" placeholder="Search.." name="search" style="width: 50%;">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
             </div>
+            <!-- Maps stuff -->
+            <!--
             <iframe id="map" src="https://snazzymaps.com/embed/132353" style="border:none;"></iframe>
+            -->
+            <div id="map"></div>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBA3g5fZbKLLYjF8EHzWwm-Ydw6jlEsdF0&libraries=places&callback=initMap" async defer></script>
             <div id = "selection" class="flex-container" style="margin-left: 10px">
                 <div id = "titleButton" style = "margin-left: 20px">
                     <p style="font-size: 25px; font-weight:999; color:#d30915;">VASA Fitness</p>
@@ -71,6 +130,7 @@
         </div>
     </div>
     <!-- Scripting -->
+    <!-- disabled
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
     <script>
     // Get the modal
@@ -98,5 +158,6 @@
         }
     }
     </script>
+    -->
 </body>
 </html>
