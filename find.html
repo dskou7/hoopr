@@ -20,15 +20,15 @@
       var infowindow;
 
       function initMap() {
-        var sydney = new google.maps.LatLng(-33.867, 151.195);
+        var byu = new google.maps.LatLng(40.250, -111.649);
 
         infowindow = new google.maps.InfoWindow();
 
         map = new google.maps.Map(
-            document.getElementById('map'), {center: sydney, zoom: 15});
+            document.getElementById('map'), {center: byu, zoom: 15});
 
         var request = {
-          query: 'Museum of Contemporary Art Australia',
+          query: 'VASA Fitness provo',
           fields: ['name', 'geometry'],
         };
 
