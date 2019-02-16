@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Hoopr</title>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="/index.css" />
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+            <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+            <body>
+                <!-- Navigation bar -->
+                <div class="w3-top">
+                    <div class="topnav">
+                        <a class="active" href="index.html" style="color:white"> HOME </a>
+                        <a href="/find.html" style="color:white"> FIND </a>
+                        <a href="/live.html" style="color:white"> LIVE </a>
+                        <a id="info" style="color:white; float:right; cursor: pointer;"> &#9432 </a>
+                    </div>
+                </div>
+                <div id = "container">
+                    <!-- Main content -->
+                    <center> <div id = "content" style="padding:110px 16px">
+                        <h1 style="color:white;">HOOPR</h1>
+                        <h2 style="color:white">FIND PICKUP BASKETBALL</h2>
+                        <center><img id = "logo" src="logo.png" height="150" width="auto" style="margin-top: 10px; margin-bottom: 40px"></img></center>
+                        <button class = "startButton" id ="started" onclick="window.location.href='/find.html'">GET STARTED</button>
+                    </div> </center>
+                </div>
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <span class="close">&times;</span>
+                                <center><h2> &nbsp&nbsp&nbsp About Us</h2></center>
+                            </div>
+                            <div class="modal-body">
+                                <center><p>Hoopr provides basketball players with an easy way of knowing where and when pick-up games are being played.
+                                We offer live video streams of gyms in your area, so you never show up to an empty court again.</p></center>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Scripting -->
+                <script>
+                var background = document.getElementById('container');
+                var startButton = document.getElementById('started');
+
+                // Fix background image jump on mobile
+                if ((/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
+                    startButton.className = "mobileButton";
+                }
+
+                // Get the modal
+                var modal = document.getElementById('myModal');
+
+                // Get the button that opens the modal
+                var btn = document.getElementById("info");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks the button, open the modal
+                btn.onclick = function() {
+                    modal.style.display = "block";
+                }
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() {
+                    modal.style.display = "none";
+                }
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+                </script>
+            </body>
+</html>
